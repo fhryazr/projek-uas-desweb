@@ -1,6 +1,8 @@
+import WhatWeDoPage from "./pages/whatwedo_pages"
+
 function App() {
   return (
-    <div>App</div>
+    <WhatWeDoPage/>
   )
 }
 
