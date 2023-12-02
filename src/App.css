@@ -1,8 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+* {
+  font-family: "Poppins";
 }
 
 .logo {
@@ -28,16 +26,20 @@
   to {
     transform: rotate(360deg);
   }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Adjust the percentage based on your aspect ratio */
+  position: relative;
+  height: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; /* Ensure this is set to 100% */
+  position: absolute;
 }
 
 .read-the-docs {
