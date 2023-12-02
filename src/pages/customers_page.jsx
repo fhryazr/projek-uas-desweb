@@ -6,9 +6,7 @@ export default function Customers_page() {
     <>
     <Customers/>
     <Customer_desc/>
-    <Customer_desc/>
-    <Customer_desc/>
-    <Customer_desc/>
     </>
   )
 }
+
