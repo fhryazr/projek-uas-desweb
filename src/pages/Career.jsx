@@ -1,13 +1,15 @@
-import Apply from '../components/apply'
+import Apply from "../components/apply";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/Footer";
 
 function Career() {
   return (
     <>
-    <div className=''>
-      <Apply/>
-    </div>
+      <Navbar />
+      <Apply />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Career
+export default Career;
