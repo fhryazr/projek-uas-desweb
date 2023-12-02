@@ -1,5 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -28,10 +29,10 @@ const Footer = () => {
         <div className="w-full lg:w-1/3 mb-6 lg:mb-0 px-20">
           <h5 className="font-bold text-lg mb-4">Company</h5>
           <ul>
-            <li className="mb-2">Work</li>
-            <li className="mb-2">Service</li>
-            <li className="mb-2">Team</li>
-            <li className="mb-2">Contact</li>
+            <li className="mb-2"><Link to="/work">Work</Link></li>
+            <li className="mb-2"><Link to="/service">Service</Link></li>
+            <li className="mb-2"><Link to="/team">Team</Link></li>
+            <li className="mb-2"><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 

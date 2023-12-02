@@ -29,11 +29,11 @@ const ApplyModal = ({ isOpen, onClose }) => {
         <form action="https://formspree.io/f/xgejjqzk" method="POST" className="space-y-4"> 
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
+            <input type="text" id="name" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" value={formData.email} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
           </div>
           <div>
             <label htmlFor="gender" className="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
@@ -44,11 +44,11 @@ const ApplyModal = ({ isOpen, onClose }) => {
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Nomor Telepon</label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" required />
           </div>
           <div>
             <label htmlFor="interests" className="block text-sm font-medium text-gray-700">Minat dan Keterampilan</label>
-            <textarea id="interests" name="interests" value={formData.interests} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" rows="4" required></textarea>
+            <textarea id="interests" name="interests" placeholder="Description" value={formData.interests} onChange={handleChange} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" rows="4" required></textarea>
           </div>
           <div className="text-right">
             <button type="button" onClick={onClose} className="inline-flex mr-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded hover:bg-gray-300">
@@ -87,7 +87,7 @@ const Apply = () => {
         {/* Kolom kedua untuk deskripsi dan tombol */}
         <div className="lg:col-span-2 flex flex-col justify-center  items-start space-y-4">
           <h2 className="text-xl font-bold text-gray-800">Apply Now</h2>
-          <p className="text-gray-600 ">
+          <p className="text-gray-600 font-sans text-justify">
             Are you passionate about creating seamless user experiences? We're looking for innovative minds to join our dynamic team, where we bring ideas to life through mobile app design, web development, and crafting intuitive UI/UX. If you have a knack for problem-solving and a flair for design, we'd love to hear from you. Dive into a workplace that values creativity and is committed to building impactful digital solutions. Hit 'Apply' to start your journey with us and make a tangible difference in the tech world!
           </p>
           <button 

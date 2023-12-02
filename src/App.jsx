@@ -1,19 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Apply from './components/Apply';
 import './App.css'; 
 
 
+
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Konten lain dari aplikasi */}
-      <div className="flex-grow">
-        {/* Komponen lainnya */}
+    <BrowserRouter>
+      <div className="flex flex-col min-h-screen">
+        {/* Konten utama aplikasi */}
+        <div className="flex-grow">
+          <Routes>
+            {/* Definisikan route di sini */}
+            {/* Misalnya, jika Anda memiliki komponen Home, About, dll. */}
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path="/about" element={<About />} /> */}
+            {/* Sementara, Apply dan Footer tidak dalam Routes karena mereka muncul di semua halaman */}
+          </Routes>
+        </div>
+        <Apply />
+        <Footer />
       </div>
-      <Apply />
-      <Footer />
-    </div>
+    </BrowserRouter>
   )
 }
 
