@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="w-full lg:w-1/3 mb-6 lg:mb-0 px-20">
           <h5 className="font-bold text-lg mb-4">Company</h5>
           <ul>
-            <li className="mb-2"><Link to="/work">Work</Link></li>
+            <li className="mb-2"><Link to="/">Home</Link></li>
             <li className="mb-2"><Link to="/service">Service</Link></li>
             <li className="mb-2"><Link to="/team">Team</Link></li>
             <li className="mb-2"><Link to="/contact">Contact</Link></li>
