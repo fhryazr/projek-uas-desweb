@@ -1,5 +1,4 @@
 // src/components/Footer.js
-import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -59,7 +58,7 @@ const Footer = () => {
       </div>
       {/* Garis pemisah */}
       <div className="border-t border-gray-300 my-4"></div> {/* <-- Garis pemisah ditambahkan di sini */}
-      <div className="text-center text-sm mt-8">
+      <div className="text-center text-sm mt-10">
         © 2023 Twiscode Pte. Ltd. | PT. Dapur Rumah Sejahtera
       </div>
     </footer>
