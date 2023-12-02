@@ -1,15 +1,13 @@
 export default function WhatWeDoDesc({ selectedItem }) {
-    // Tambahkan data informasi ke masing-masing aplikasi di sini
-
     const mobileApplicationData = {
         judul: "Mobile Application",
-        deskripsi: "Informasi mengenai Mobile Application",
+        deskripsi: "Building mobile applications is never easy. P2P lending app ? Logistic App ? E-Commerce App ? We have done them all. Done them all well. Done them all fast. Our core strength is supercharging your mobile applications idea so that you can focus on the core business. Leave the keyboard-clacking to us.",
         image: "../src/assets/mobile_application.png"
     };
 
     const webApplicationData = {
         judul: "Web Application",
-        deskripsi: "Informasi mengenai Web Application",
+        deskripsi: "Building mobile applications is never easy. P2P lending app ? Logistic App ? E-Commerce App ? We have done them all. Done them all well. Done them all fast. Our core strength is supercharging your mobile applications idea so that you can focus on the core business. Leave the keyboard-clacking to us.",
         image: "../src/assets/web_application.png"
     };
 
