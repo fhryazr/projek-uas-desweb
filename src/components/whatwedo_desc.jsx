@@ -15,7 +15,7 @@ export default function WhatWeDoDesc({ selectedItem }) {
 
     return (
         <>
-            <div className="flex mx-80 mt-16 p-4 px-16 gap-4 rounded-full relative overflow-hidden">
+            <div className={`flex mx-80 mt-16 p-4 px-16 gap-4 rounded-full relative overflow-hidden transition-container ${!selectedItem ? 'hide' : ''}`}>
                 {selectedItem === 'Mobile Application' && (
                     <div className="w-1/2 h-auto relative">
                         <img src={mobileApplicationData.image} alt={mobileApplicationData.judul} />
