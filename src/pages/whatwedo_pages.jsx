@@ -4,8 +4,8 @@ import WhatWeDoDesc from "../components/whatwedo_desc";
 export default function WhatWeDoPage() {
     return (
         <>
-            <WhatWeDo/>
-            <WhatWeDoDesc/>
+        <WhatWeDoDesc/>
+        <WhatWeDo/>
         </>
     )
 }
