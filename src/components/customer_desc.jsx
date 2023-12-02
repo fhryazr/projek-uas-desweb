@@ -59,13 +59,13 @@ export default function Customer_desc() {
     ];
 
     return (
-        <>
+        <div className="grid grid-cols-1 lg:grid-cols-2 px-10 mt-16">
             {customers.map((customer, index) => (
-                <div key={index} className="flex mx-80 mt-16 p-4 px-16 gap-4 rounded-full bg-green-100">
+                <div key={index} className="flex flex-col md:flex-row mt-16 p-4 px-16 gap-4 w-full">
                     <div className="w-1/2 h-auto">
                         <img src={customer.image} alt="Deskripsi gambar" />
                     </div>
-                    <div className="w-1/2 flex flex-col h-auto justify-between">
+                    <div className="flex flex-col h-auto justify-between">
                         <div>
                             <h1 className="text-[36px] font-bold">{customer.nama}</h1>
                             <h2 className="mt-4 text-gray-500 text-[12px] font-medium">{customer.deskripsi}</h2>
@@ -74,6 +74,6 @@ export default function Customer_desc() {
                     </div>
                 </div>
             ))}
-        </>
+        </div>
     );
 }

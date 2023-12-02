@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/customers" element={<Customers_page/>}/>
+        <Route path="/customers/*" element={<Customers_page/>}/>
       </Routes>
     </>
   );
