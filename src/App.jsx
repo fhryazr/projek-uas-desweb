@@ -1,6 +1,8 @@
+import Customers_page from "./pages/customers_page"
+
 function App() {
   return (
-    <div>App</div>
+    <Customers_page/>
   )
 }
 
