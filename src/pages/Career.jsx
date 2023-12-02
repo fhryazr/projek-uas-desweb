@@ -3,7 +3,7 @@ import Apply from '../components/apply'
 function Career() {
   return (
     <>
-    <div className='h-scren'>
+    <div className=''>
       <Apply/>
     </div>
     </>
