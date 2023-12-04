@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import Customers_page from "./pages/customers_page"
 import Footer from './components/Footer';
 import TeamComponent from './components/teamcomponent';
 import Apply from './components/Apply';
-import './App.css'; 
-
-
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
+<<<<<<< HEAD
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         {/* Konten utama aplikasi */}
@@ -22,11 +22,17 @@ function App() {
           </Routes>
         </div>
         <TeamComponent />
+=======
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/customers/*" element={<Customers_page/>}/>
+>>>>>>> 6f34050d6d4d58ccd729fa15ead3a7118ce0b5d4
         <Apply />
         <Footer />
-      </div>
-    </BrowserRouter>
-  )
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
