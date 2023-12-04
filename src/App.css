@@ -3,12 +3,13 @@
   font-family: "Poppins";
 }
 
-<<<<<<< HEAD
+
 .map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
   /* Adjust the percentage based on your aspect ratio */
-=======
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -36,7 +37,6 @@
 .map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%; /* Adjust the percentage based on your aspect ratio */
->>>>>>> a956a6eccef2ab816963f69ff2ebe9be66f4002f
   position: relative;
   height: 0;
 }
@@ -45,12 +45,11 @@
   left: 0;
   top: 0;
   height: 100%;
-<<<<<<< HEAD
   width: 100%;
   /* Ensure this is set to 100% */
   position: absolute;
 }
-=======
+
   width: 100%; /* Ensure this is set to 100% */
   position: absolute;
 }
@@ -67,4 +66,4 @@
 .transition-container.hide {
   opacity: 0;
 }
->>>>>>> a956a6eccef2ab816963f69ff2ebe9be66f4002f
+
