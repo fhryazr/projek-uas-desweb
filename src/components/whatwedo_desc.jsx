@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; 
 
 export default function WhatWeDoDesc({ handleItemClick }) {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -21,34 +22,44 @@ export default function WhatWeDoDesc({ handleItemClick }) {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row mx-6 lg:mx-80 mt-6 lg:mt-16 gap-4">
+        <div className="flex flex-col lg:flex-row mx-1 lg:mx-4 mt-6 lg:mt-16 gap-4 lg:gap-20">
             <div className="w-full lg:w-1/2 h-auto flex justify-start items-center">
                 {selectedItem === 'Mobile Application' && (
-                    <div className="w-full lg:w-4/5 h-auto relative">
-                        <img src={mobileApplicationData.image} alt={mobileApplicationData.judul} className="w-full h-auto" />
-                        <div className="absolute top-0 right-0 w-full h-full flex flex-col justify-center items-end text-white text-center lg:text-right p-4">
-                            <h1 className="text-[24px] lg:text-[36px] font-bold">{mobileApplicationData.judul}</h1>
-                            <h2 className="mt-2 lg:mt-4 text-white text-[10px] lg:text-[12px] font-normal mx-4 lg:text-right">{mobileApplicationData.deskripsi}</h2>
+                    <motion.div 
+                        className="w-full h-auto relative flex flex-col justify-center items-end"
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        transition={{ duration: 0.5, ease: 'easeInOut' }} 
+                    >
+                        <img src={mobileApplicationData.image} alt={mobileApplicationData.judul} className="w-full h-auto lg:w-auto" />
+                        <div className="absolute top-0 right-0 w-1/2 h-full flex flex-col justify-center items-end text-white text-end lg:text-right p-1">
+                            <h1 className="text-[7vw] lg:text-[42px] font-bold">{mobileApplicationData.judul}</h1>
+                            <h2 className="mt-2 lg:mt-4 text-[1.8vw] lg:text-[12px] font-normal mx-1 lg:text-right">{mobileApplicationData.deskripsi}</h2>
                         </div>
-                    </div>
+                    </motion.div>
                 )}
 
                 {selectedItem === 'Web Application' && (
-                    <div className="w-full lg:w-4/5 h-auto relative">
-                        <img src={webApplicationData.image} alt={webApplicationData.judul} className="w-full h-auto" />
-                        <div className="absolute top-0 right-0 w-full h-full flex flex-col justify-center items-end text-white text-center lg:text-right p-4">
-                            <h1 className="text-[24px] lg:text-[36px] font-bold">{webApplicationData.judul}</h1>
-                            <h2 className="mt-2 lg:mt-4 text-white text-[10px] lg:text-[12px] font-normal mx-4 lg:text-right">{webApplicationData.deskripsi}</h2>
+                    <motion.div 
+                        className="w-full h-auto relative flex flex-col justify-center items-end"
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        transition={{ duration: 0.5, ease: 'easeInOut' }} 
+                    >
+                        <img src={webApplicationData.image} alt={webApplicationData.judul} className="w-full h-auto lg:w-auto" />
+                        <div className="absolute top-0 right-0 w-1/2 h-full flex flex-col justify-center items-end text-white text-end lg:text-right p-1">
+                            <h1 className="text-[7vw] lg:text-[46px] font-bold">{webApplicationData.judul}</h1>
+                            <h2 className="mt-2 lg:mt-4 text-[1.8vw] lg:text-[12px] font-normal mx-1 lg:text-right">{webApplicationData.deskripsi}</h2>
                         </div>
-                    </div>
+                    </motion.div>
                 )}
             </div>
 
-            <div className="w-full lg:w-1/2 h-auto flex flex-col justify-center items-center lg:items-start">
-            <h1 className="text-4xl text-black lg:text-[3.6rem] font-bold lg:leading-[72px]">
-            What <br /> We Do?
-            </h1>
-                <h2 className="mt-4 text-gray-500 text-[16px] lg:text-[24px] font-medium text-center lg:text-left">
+            <div className="w-full lg:w-1/2 h-auto flex flex-col justify-start items-start lg:items-start">
+                <h1 className="text-[8vw] lg:text-[4.5rem] font-bold">
+                    What <br /> We Do?
+                </h1>
+                <h2 className="mt-4 text-gray-500 text-[3vw] lg:text-[24px] font-medium text-start lg:text-left">
                     <ul>
                         <li onClick={() => handleClick('Mobile Application')} className="cursor-pointer">Mobile Application</li>
                         <li onClick={() => handleClick('Web Application')} className="cursor-pointer">Web Application</li>
