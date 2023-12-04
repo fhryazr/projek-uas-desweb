@@ -1,4 +1,9 @@
-export default function WhatWeDoDesc({ selectedItem }) {
+import React, { useState } from 'react';
+import { motion } from 'framer-motion'; 
+
+export default function WhatWeDoDesc({ handleItemClick }) {
+    const [selectedItem, setSelectedItem] = useState(null);
+
     const mobileApplicationData = {
         judul: "Mobile Application",
         deskripsi: "Building mobile applications is never easy. P2P lending app ? Logistic App ? E-Commerce App ? We have done them all. Done them all well. Done them all fast. Our core strength is supercharging your mobile applications idea so that you can focus on the core business. Leave the keyboard-clacking to us.",
@@ -7,35 +12,60 @@ export default function WhatWeDoDesc({ selectedItem }) {
 
     const webApplicationData = {
         judul: "Web Application",
-        deskripsi: "Developing web applications presents its challenges. E-commerce platforms? CRM systems? Social media applications? We've tackled them all. With precision and speed, we've mastered the art of web application development. Our forte lies in enhancing your web application concepts, allowing you to concentrate on your core business. Let us handle the intricate scripting while you focus on your goals.",
+        deskripsi: "Building web applications is never easy. E-Commerce Platform? CRM System? Social Media Application? We have done them all. Done them all well. Done them all fast. Our core strength is supercharging your web applications idea so that you can focus on the core business. Leave the server-side scripting to us.",
         image: "../src/assets/web_application.png"
     };
 
-    return (
-        <>
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className={`grid grid-cols-1 gap-6 lg:grid-cols-2 mt-16`}>
-                    {selectedItem === 'Mobile Application' && (
-                        <div className="w-full lg:h-auto relative">
-                            <img src={mobileApplicationData.image} alt={mobileApplicationData.judul} className="w-full h-auto" />
-                            <div className="absolute top-0 right-0 w-full h-full flex flex-col justify-center items-end text-white text-center">
-                                <h1 className="text-[36px] font-bold text-right mr-4">{mobileApplicationData.judul}</h1>
-                                <h2 className="mt-4 text-white text-[12px] font-normal mx-4 text-right">{mobileApplicationData.deskripsi}</h2>
-                            </div>
-                        </div>
-                    )}
+    const handleClick = (item) => {
+        setSelectedItem(item);
+        handleItemClick(item);
+    };
 
-                    {selectedItem === 'Web Application' && (
-                        <div className="w-full lg:h-auto relative">
-                            <img src={webApplicationData.image} alt={webApplicationData.judul} className="w-full h-auto" />
-                            <div className="absolute top-0 right-0 w-full h-full flex flex-col justify-center items-end text-white text-center">
-                                <h1 className="text-[36px] font-bold text-right mr-4">{webApplicationData.judul}</h1>
-                                <h2 className="mt-4 text-white text-[12px] font-normal mx-4 text-right">{webApplicationData.deskripsi}</h2>
-                            </div>
+    return (
+        <div className="flex flex-col lg:flex-row mx-1 lg:mx-4 mt-6 lg:mt-16 gap-4 lg:gap-20">
+            <div className="w-full lg:w-1/2 h-auto flex justify-start items-center">
+                {selectedItem === 'Mobile Application' && (
+                    <motion.div 
+                        className="w-full h-auto relative flex flex-col justify-center items-end"
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        transition={{ duration: 0.5, ease: 'easeInOut' }} 
+                    >
+                        <img src={mobileApplicationData.image} alt={mobileApplicationData.judul} className="w-full h-auto lg:w-auto" />
+                        <div className="absolute top-0 right-0 w-1/2 h-full flex flex-col justify-center items-end text-white text-end lg:text-right p-1">
+                            <h1 className="text-[7vw] lg:text-[42px] font-bold">{mobileApplicationData.judul}</h1>
+                            <h2 className="mt-2 lg:mt-4 text-[1.8vw] lg:text-[12px] font-normal mx-1 lg:text-right">{mobileApplicationData.deskripsi}</h2>
                         </div>
-                    )}
-                </div>
+                    </motion.div>
+                )}
+
+                {selectedItem === 'Web Application' && (
+                    <motion.div 
+                        className="w-full h-auto relative flex flex-col justify-center items-end"
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        transition={{ duration: 0.5, ease: 'easeInOut' }} 
+                    >
+                        <img src={webApplicationData.image} alt={webApplicationData.judul} className="w-full h-auto lg:w-auto" />
+                        <div className="absolute top-0 right-0 w-1/2 h-full flex flex-col justify-center items-end text-white text-end lg:text-right p-1">
+                            <h1 className="text-[7vw] lg:text-[46px] font-bold">{webApplicationData.judul}</h1>
+                            <h2 className="mt-2 lg:mt-4 text-[1.8vw] lg:text-[12px] font-normal mx-1 lg:text-right">{webApplicationData.deskripsi}</h2>
+                        </div>
+                    </motion.div>
+                )}
             </div>
-        </>
+
+            <div className="w-full lg:w-1/2 h-auto flex flex-col justify-start items-start lg:items-start">
+                <h1 className="text-[8vw] lg:text-[4.5rem] font-bold">
+                    What <br /> We Do?
+                </h1>
+                <h2 className="mt-4 text-gray-500 text-[3vw] lg:text-[24px] font-medium text-start lg:text-left">
+                    <ul>
+                        <li onClick={() => handleClick('Mobile Application')} className="cursor-pointer">Mobile Application</li>
+                        <li onClick={() => handleClick('Web Application')} className="cursor-pointer">Web Application</li>
+                    </ul>
+                </h2>
+            </div>
+        </div>
     );
 }
