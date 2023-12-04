@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
+import TeamComponent from './components/teamcomponent';
 import Apply from './components/Apply';
 import './App.css'; 
 
@@ -20,6 +21,7 @@ function App() {
             {/* Sementara, Apply dan Footer tidak dalam Routes karena mereka muncul di semua halaman */}
           </Routes>
         </div>
+        <TeamComponent />
         <Apply />
         <Footer />
       </div>
