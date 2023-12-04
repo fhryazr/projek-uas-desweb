@@ -5,11 +5,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   const Links = [
     { name: "Home", link: "/" },
-    { name: "Service", link: "/" },
+    { name: "Service", link: "/service" },
     { name: "Our Customer", link: "/customers" },
     { name: "Team", link: "/" },
-    { name: "Career", link: "/" },
-    { name: "Contact", link: "/" },
+    { name: "Career", link: "/career" },
+    { name: "Contact", link: "/contact" },
   ];
   const [open, setOpen] = useState(false);
   return (

@@ -1,7 +1,38 @@
 /* App.css */
 * {
-  font-family: "Poppins"
+  font-family: "Poppins";
 }
+
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* Adjust the percentage based on your aspect ratio */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 
 .map-responsive {
   overflow: hidden;
@@ -14,12 +45,25 @@
   left: 0;
   top: 0;
   height: 100%;
+  width: 100%;
+  /* Ensure this is set to 100% */
+  position: absolute;
+}
+
   width: 100%; /* Ensure this is set to 100% */
   position: absolute;
 }
 
+.read-the-docs {
+  color: #888;
+}
 
-<<<<<<< HEAD
-=======
+.transition-container {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
 
->>>>>>> 6f34050d6d4d58ccd729fa15ead3a7118ce0b5d4
+.transition-container.hide {
+  opacity: 0;
+}
+
