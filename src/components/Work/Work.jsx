@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Work() {
   const [hoveredBox, setHoveredBox] = useState('Discuss');
@@ -112,7 +113,7 @@ function Work() {
               </p>
             )}
             <button className="bg-black text-white h-[3rem] w-[10rem] hover:bg-white hover:border-[1px] border-black hover:text-black transition duration-300 ">
-              More
+              <Link to="/service">More</Link>
             </button>
           </div>
         </div>

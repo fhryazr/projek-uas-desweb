@@ -1,11 +1,11 @@
 import WhatWeDoPage from "./pages/whatwedo_pages"
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import TeamComponent from './components/teamcomponent';
 import Customers_page from "./pages/customers_page";
 import { Routes, Route } from "react-router-dom";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<WhatWeDoPage/>} />
-        <Route path="/teams" element={<TeamComponent />} />
+        <Route path="/teams" element={<TeamPage />} />
       </Routes>
     </>
   );
