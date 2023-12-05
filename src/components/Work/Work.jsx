@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Work() {
-  const [hoveredBox, setHoveredBox] = useState('Discuss');
+  const [hoveredBox, setHoveredBox] = useState("Discuss");
   const [isTextVisible, setIsTextVisible] = useState(true);
 
   const handleBoxHover = (box) => {
@@ -39,7 +39,6 @@ function Work() {
       clearInterval(intervalId);
     };
   }, [hoveredBox]);
-
 
   return (
     <>
@@ -95,26 +94,30 @@ function Work() {
               </p>
             )}
             {hoveredBox === "Plan" && (
-              <p className={`TeksChange text-white text-xl md:text-2xl font-medium mb-3 ${
-                isTextVisible
-                  ? "opacity-100 transition-opacity ease-in-out duration-600"
-                  : "opacity-0 transition-opacity ease-in-out duration-600"
-              }`}>
+              <p
+                className={`TeksChange text-white text-xl md:text-2xl font-medium mb-3 ${
+                  isTextVisible
+                    ? "opacity-100 transition-opacity ease-in-out duration-600"
+                    : "opacity-0 transition-opacity ease-in-out duration-600"
+                }`}>
                 Planning the details of the projects you have in mind.
               </p>
             )}
             {hoveredBox === "Coding" && (
-              <p className={`TeksChange text-white text-xl md:text-2xl font-medium mb-3 ${
-                isTextVisible
-                  ? "opacity-100 transition-opacity ease-in-out duration-600"
-                  : "opacity-0 transition-opacity ease-in-out duration-600"
-              }`}>
+              <p
+                className={`TeksChange text-white text-xl md:text-2xl font-medium mb-3 ${
+                  isTextVisible
+                    ? "opacity-100 transition-opacity ease-in-out duration-600"
+                    : "opacity-0 transition-opacity ease-in-out duration-600"
+                }`}>
                 Let&apos;s dive into coding and create amazing solutions
               </p>
             )}
-            <button className="bg-black text-white h-[3rem] w-[10rem] hover:bg-white hover:border-[1px] border-black hover:text-black transition duration-300 ">
-              <Link to="/service">More</Link>
-            </button>
+            <Link to="/service">
+              <button className="bg-black text-white h-[3rem] w-[10rem] hover:bg-white hover:border-[1px] border-black hover:text-black transition duration-300 ">
+                More
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -151,10 +154,7 @@ function Work() {
             transition: background .5s ease-in-out;
           }
           .Box-1 {
-            background-position: ${hoveredBox === "Discuss"
-              ? "bottom"
-              : ''
-            };
+            background-position: ${hoveredBox === "Discuss" ? "bottom" : ""};
             .num {
               color: ${hoveredBox === "Discuss" ? "white" : ""};
               opacity: ${hoveredBox === "Discuss" ? "1" : ""};
@@ -162,20 +162,14 @@ function Work() {
           }
 
           .Box-2 {
-            background-position: ${hoveredBox === "Plan"
-              ? "bottom"
-              : ''
-            };
+            background-position: ${hoveredBox === "Plan" ? "bottom" : ""};
             .num {
               color: ${hoveredBox === "Plan" ? "white" : ""};
               opacity: ${hoveredBox === "Plan" ? "1" : ""};
             }
           }
           .Box-3 {
-            background-position: ${hoveredBox === "Coding"
-              ? "bottom"
-              : ''
-            };
+            background-position: ${hoveredBox === "Coding" ? "bottom" : ""};
             .num {
               color: ${hoveredBox === "Coding" ? "white" : ""};
               opacity: ${hoveredBox === "Coding" ? "1" : ""};
